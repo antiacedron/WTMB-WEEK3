@@ -65,6 +65,10 @@ const main = async () => {
  await Database.save(thereaders) 
  const loadedReaders = await Database.load('data.json'); 
  const convertedReaders = loadedReaders.map(Person.create); 
+ 
+ //checking  that they are objects again, are functions working ?  
+ convertedCities[1].sayName(); 
+
 } 
 
 (async () => {
@@ -75,8 +79,7 @@ const main = async () => {
   }
 })() 
 
-//checking  that they are objects again, are functions working ?  
-convertedCities[1].sayName();  
+
 // convertedBooks[1].located(venice); 
 // convertedReaders[2].read(loadedBooks[1]); 
  
